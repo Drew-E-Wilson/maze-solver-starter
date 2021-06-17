@@ -19,8 +19,10 @@ const input = document.querySelector('input[type="file"]')
 solveButton.onclick = function() {
     mazeSolution.appendChild(getMazeElement());
 }
+
 input.addEventListener('change', function(e) {
     console.log(input.files);
+    
     const reader = new FileReader();
     reader.onload = function() {
         grid = reader.result.split('\n').map(function(line){
@@ -45,13 +47,6 @@ input.addEventListener('change', function(e) {
        console.log("There is no possible path.");
  
     console.log(maze.toString());
- 
-       
-
-    
-   
-
-
     }
     reader.readAsText(input.files[0]);
 
@@ -97,38 +92,3 @@ const getMazeElement = () =>
 
 
      
-
-
-        // const processSquareSelection = (event) => {
-
-        //     // option to play sound
-        //     if (dingSoundOn) {
-        //         dingSound.play();
-        //     }
-
-        //     const location = event.target.id;
-
-
-        //     console.log("target: " + location);
-        //     console.log("element: " + document.getElementById(location));
-
-        //     /* make square  unclickable */
-        //     //document.getElementById(location).removeEventListener("click", processSquareSelection);
-
-        //     /* id has format "r#c#" */
-        //     let rowClicked = location.charAt(1);
-        //     let colClicked = location.charAt(3);
-
-        //     console.log("Square played at (" + rowClicked + " , " + colClicked + ")");
-
-        //     // change grid for given row and column
-        //     grid[rowClicked][colClicked] = currentPlayer;
-        //     flipTiles(rowClicked, colClicked);
-
-
-
-        //     updateHTML();
-        // }
-
-
-       // init();
