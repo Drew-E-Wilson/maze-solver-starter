@@ -1,0 +1,64 @@
+*{
+  font-size: 12px;
+}
+
+body{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1000px;
+  margin: auto;
+  background-color:antiquewhite(90, 98, 100);
+  color: black;
+}
+
+#maze-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.maze{
+
+  width: 400px; 
+  height: 400px;
+  background-color: darkgray;
+  border: white 2px solid;
+
+}
+
+.maze-image{
+  margin: 0;
+  
+  top: 50%;
+  left: 50%;
+  /* -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.square{
+  width: 20px;
+  height: 20px;
+}
+
+.black{
+  background-color: black;
+}
+
+.white{
+  background-color: white;
+}
+
+.red{
+  background-color: red;
+}
+
+.gold{
+  background-color:gold;
+}
